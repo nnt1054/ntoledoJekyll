@@ -1,0 +1,97 @@
+html, body {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Comfortaa';
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+.fullpage {
+	width: 100vw;
+	height: 100vh;
+	margin: 0px;
+	padding: 0px;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.row, .center-container > * {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.column > * {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.center-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.circle-img {
+  border-radius: 50%;
+  height: 128px;
+  width: 128px;
+  border: 2px solid black;
+}
+
+.rect-btn {
+  width: 128px;
+  height: 32px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 2px solid black;
+  background: white;
+  box-shadow: 5px 5px;
+  transform: translateY(-5px) translateX(-5px);
+  cursor: pointer;
+}
+
+.rect-btn:hover {
+	transition: 0.1s;
+	box-shadow: 2px 2px;
+	transform: translateY(-2px) translateX(-2px);
+}
+
+.sm-link {
+	font-size: 10pt;
+	padding: 6px 8px;
+}
+
+.nav-container {
+	position: relative;
+}
+
+.nav-list {
+	display: none;
+	position: absolute;
+	margin-top: 38px;
+	margin-left: 5px;
+}
+
+.nav-list > * {
+}
+
+.nav-container:hover > .nav-list {
+	display: block;
+}
+
+.nav-container:hover {
+  	box-shadow: 5px 5px;
+  	transform: translateY(-5px) translateX(-5px);
+}

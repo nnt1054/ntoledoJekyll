@@ -52,7 +52,6 @@ a {
 
 .rect-btn {
   width: 128px;
-  height: 32px;
   margin-left: 10px;
   margin-right: 10px;
   border: 2px solid black;
@@ -60,6 +59,10 @@ a {
   box-shadow: 5px 5px;
   transform: translateY(-5px) translateX(-5px);
   cursor: pointer;
+}
+
+.height32 {
+	height: 32px;
 }
 
 .rect-btn:hover {
@@ -78,20 +81,41 @@ a {
 }
 
 .nav-list {
-	display: none;
 	position: absolute;
+	display: block;
 	margin-top: 38px;
 	margin-left: 5px;
-}
-
-.nav-list > * {
 }
 
 .nav-container:hover > .nav-list {
 	display: block;
 }
 
+.nav-list > * {
+	opacity: 0;
+	height: 0px;
+	box-shadow: 5px 0px;
+	transition: 0.2s;
+}
+
+.nav-list > *:hover {
+	transform: translateY(-5px) translateX(5px);
+}
+
+.nav-container:hover > .nav-list > * {
+	opacity: 1;
+	height: 32px;
+	box-shadow: 5px 5px;
+}
+
 .nav-container:hover {
   	box-shadow: 5px 5px;
-  	transform: translateY(-5px) translateX(-5px);
+  	transform: translateY(-5px) translateX(-5px) scale(1.025);
+}
+
+.back-btn {
+	position: fixed;
+	top: 32px;
+	left: 32px;
+	z-index: 1000;
 }
